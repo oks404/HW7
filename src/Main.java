@@ -52,18 +52,21 @@ public class Main {
         for (; firstFriday <= 31; firstFriday = firstFriday + 7)
             System.out.print("\n Сегодня пятница, " + firstFriday + "-е число. Необходимо подготовить отчет.");
 //  Задание 3.1
-//        int currentYear = 2022;
-//        int previousYears = 0;
-//        int futureYears = 0;
-//        for (; previousYears <= 2022; previousYears = previousYears + 79) {
-//            if (previousYears > (currentYear - 200)) {
-//                System.out.print("\n" + previousYears);
-//            }
-//        }
-//        for (; futureYears > 2022; futureYears = futureYears + 79)
-//            if (futureYears < (currentYear + 200)) {
-//                System.out.print("\n" +futureYears);
-//            }
+        int currentYear = 2022;
+        int previousYears = currentYear - 200;
+        int futureYears = currentYear + 100;
+        while (previousYears < 2022){
+            previousYears = previousYears + 1;
+            if (previousYears % 79 == 0) {
+                System.out.print("\n" + previousYears);
+            }
+        }
+        while ( futureYears > 2022){
+            futureYears = futureYears - 1;
+            if (futureYears % 79 == 0){
+                System.out.println("\n" + futureYears);
+            }
+        }
 //  Задание 3.2
         int multiplicand = 2;
         int multiplier = 0;
